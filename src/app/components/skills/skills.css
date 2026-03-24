@@ -1,0 +1,70 @@
+.skills-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+.skill-category {
+  background: var(--card); border: 1px solid var(--border);
+  padding: 2rem; position: relative; overflow: hidden;
+  transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+.skill-category::before {
+  content: ''; position: absolute; top: 0; left: 0;
+  width: 3px; height: 0;
+  background: linear-gradient(180deg, var(--accent), var(--accent2));
+  transition: height 0.4s ease;
+}
+.skill-category:hover {
+  border-color: rgba(0,229,255,0.2); transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,229,255,0.06);
+}
+.skill-category:hover::before { height: 100%; }
+.skill-cat-title {
+  font-family: 'Syne', sans-serif; font-size: 0.85rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 1.5rem;
+}
+.skill-items { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.skill-pill {
+  padding: 0.45rem 1rem;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  font-size: 0.73rem; color: var(--text); letter-spacing: 0.04em;
+  transition: all 0.25s;
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  border-radius: 2px;
+}
+.skill-pill:hover {
+  background: rgba(0,229,255,0.07); border-color: rgba(0,229,255,0.4);
+  color: var(--accent); transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,229,255,0.1);
+}
+
+
+.tech-logo {
+  width: 16px; height: 16px;
+  object-fit: contain;
+  display: inline-block;
+  vertical-align: middle;
+  min-width: 16px;
+}
+
+
+section { padding: 7rem 3rem; max-width: 1200px; margin: 0 auto; }
+.section-header { margin-bottom: 4rem; }
+.section-tag {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-size: 0.65rem; letter-spacing: 0.25em;
+  text-transform: uppercase; color: var(--accent); margin-bottom: 1rem;
+}
+.section-tag::before { content: '//'; color: var(--accent2); margin-right: 0.2rem; }
+.section-title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 800; color: var(--text); line-height: 1.1;
+}
+.section-line {
+  width: 3rem; height: 2px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+  margin-top: 1.2rem;
+}

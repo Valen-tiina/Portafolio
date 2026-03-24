@@ -1,0 +1,6 @@
+footer {
+  border-top: 1px solid var(--border); padding: 2rem 3rem;
+  display: flex; justify-content: space-between; align-items: center; max-width: 100%;
+}
+.footer-text { font-size: 0.7rem; color: var(--muted); letter-spacing: 0.05em; }
+.footer-text span { color: var(--accent); }
